@@ -1,0 +1,36 @@
+{
+  "name": "devbills-api",
+  "version": "1.0.0",
+  "description": "Devbills Api Controle sua vida financeira pessoal de forma rápida e fácil",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint ./ --fix",
+    "dev": "tsx watch ./src/server.ts"
+  },
+  "keywords": [],
+  "author": {
+    "name": "Pablo Martins",
+    "email": "pablomartinsti@outlook.com",
+    "url": "https://www.linkedin.com/in/pablo-ferreira-martins/"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "@eslint/js": "^9.13.0",
+    "@types/node": "^22.7.9",
+    "eslint": "^9.13.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-import-helpers": "^2.0.1",
+    "eslint-plugin-prettier": "^5.2.1",
+    "globals": "^15.11.0",
+    "prettier": "^3.3.3",
+    "tsx": "^4.19.1",
+    "typescript": "^5.6.3",
+    "typescript-eslint": "^8.11.0"
+  },
+  "dependencies": {
+    "@types/express": "^5.0.0",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1",
+    "mongoose": "^8.7.2"
+  }
+}
