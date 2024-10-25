@@ -1,5 +1,5 @@
-import { CreateCategoryDTO } from "../dtos/categories.dto";
 import { CategoriesRepository } from "../database/repositories/categories.repository";
+import { CreateCategoryDTO } from "../dtos/categories.dto";
 import { Category } from "../entities/category.entity";
 
 export class CategoriesService {
@@ -8,7 +8,7 @@ export class CategoriesService {
     async create({ title, color }: CreateCategoryDTO): Promise<Category> {
         const category = new Category({
             title,
-            color
+            color,
         })
 
         const createdCategory = await this.categoriesRepository.create(category)
