@@ -1,4 +1,4 @@
 export type CreateCategoryDTO = {
-    title: String
+    title: string
     color: string
 }
