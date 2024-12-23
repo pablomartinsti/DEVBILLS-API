@@ -1,11 +1,20 @@
+# Use uma imagem base leve do Node.js
 FROM node:18-alpine
 
+# Define o diretório de trabalho no container
 WORKDIR /home/app
 
-COPY . ./
+# Copia apenas os arquivos necessários
+COPY package*.json ./
 
-RUN npm i
+# Instala as dependências apenas para produção
+RUN npm ci --only=production
 
+# Copia o restante dos arquivos do projeto
+COPY . .
+
+# Expõe a porta 3333
 EXPOSE 3333
 
-CMD ["npm", "run", "dev"]
+# Define o comando para rodar a aplicação em produção
+CMD ["npm", "run", "start"]
